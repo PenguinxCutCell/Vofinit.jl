@@ -1,6 +1,7 @@
 # Vofinit.jl
 
 ![CI](https://github.com/PenguinxCutCell/Vofinit.jl/actions/workflows/ci.yml/badge.svg)
+![Coverage](https://codecov.io/gh/PenguinxCutCell/Vofinit.jl/branch/main/graph/badge.svg)
 
 A small Julia wrapper around the libvofi library providing utilities to
 compute cell types and volume fractions by calling the libvofi C API.
