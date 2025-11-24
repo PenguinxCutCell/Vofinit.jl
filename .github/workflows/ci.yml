@@ -22,6 +22,33 @@ jobs:
         with:
           version: ${{ matrix.julia }}
 
+      - name: Cache Julia registries
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.julia/registries
+          key: ${{ runner.os }}-julia-registries-${{ hashFiles('**/Project.toml','**/Manifest.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-julia-registries-
+
+      - name: Cache Julia artifacts
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.julia/artifacts
+          key: ${{ runner.os }}-julia-artifacts-${{ matrix.julia }}-${{ hashFiles('**/Project.toml','**/Manifest.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-julia-artifacts-${{ matrix.julia }}-
+
+      - name: Cache compiled packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.julia/compiled
+          key: ${{ runner.os }}-julia-compiled-${{ matrix.julia }}-${{ hashFiles('**/Project.toml','**/Manifest.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-julia-compiled-${{ matrix.julia }}-
+
       - name: Install dependencies
         run: julia --project=. -e 'using Pkg; Pkg.instantiate()'
 
