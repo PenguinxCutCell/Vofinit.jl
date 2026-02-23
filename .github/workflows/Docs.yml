@@ -39,6 +39,7 @@ jobs:
         run: |
           julia --project=docs -e '
             using Pkg
+            Pkg.develop(Pkg.PackageSpec(url= "https://github.com/PenguinxCutCell/Vofinit.jl.git"))
             Pkg.instantiate()'
 
       - name: Build and deploy docs
