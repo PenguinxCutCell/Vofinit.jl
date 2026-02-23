@@ -1,5 +1,6 @@
 # Vofinit.jl
 
+[![In development documentation](https://img.shields.io/badge/docs-dev-blue.svg)](https://penguinxcutcell.github.io/Vofinit.jl/dev)
 ![CI](https://github.com/PenguinxCutCell/Vofinit.jl/actions/workflows/ci.yml/badge.svg)
 ![Coverage](https://codecov.io/gh/PenguinxCutCell/Vofinit.jl/branch/main/graph/badge.svg)
 
