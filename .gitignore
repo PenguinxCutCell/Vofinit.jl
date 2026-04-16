@@ -2,3 +2,4 @@ Manifest.toml
 *.cov
 docs/build
 docs/Manifest.toml
+AGENTS.md
